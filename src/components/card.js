@@ -55,16 +55,16 @@ const cardAppender = (selector) => {
 
   axios
   .get("https://lambda-times-api.herokuapp.com/articles")
-  .then(item => {
-    const articles = item.data.articles;
-    for(const article in articles){// for in  loop
+  .then(response => {
+    const articles = response.data.articles;
+    for(const article in articles){
       articles[article].forEach(i => cardTab.appendChild(Card(i)))
         }
       })
     
 
 
-
+  // didn't get this last part Task 6. Is there a better way to do for each?
   //   keys.forEach((key) => {
   //     response.data.articles[key].forEach((article) => {
   //       cardTab.appendChild(Card(article))
