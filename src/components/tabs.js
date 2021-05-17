@@ -13,7 +13,6 @@ const Tabs = (topics) => {
     //adding textContent
     tabsDiv.textContent = element
     //adding hierarchy
-    //tabsDiv.append(tabsDiv)
     topicsDiv.appendChild(tabsDiv)
   });
   return topicsDiv
@@ -37,11 +36,9 @@ const Tabs = (topics) => {
 const tabsAppender = (selector) => {
   axios
   .get("https://lambda-times-api.herokuapp.com/topics")
-  .then(newData => {
-    //let tabLink = document.querySelector(selector)
+  .then(response => {
     const tabLink = document.querySelector(selector)
-    //tabLink.append(Tabs(newData.data.topics))
-    tabLink.appendChild(Tabs(newData.data.topics))
+    tabLink.appendChild(Tabs(response.data.topics))
   })
   .catch(error => console.log(error))
 
