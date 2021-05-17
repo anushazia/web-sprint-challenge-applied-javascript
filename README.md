@@ -76,7 +76,16 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+   { ` The DOM is called Document Object Model. The DOM is a type of bridge between content and the browser.` }
+
 2. What is an event?
+   { `An event is any interaction that a user has with a site. It could be a click, moving the mouse, scrolling, pressing a key. The browser can track all of these and classifies them as events. These events can cause a trigger to occur inside the browser.` }
+
 3. What is an event listener?
+   { `When an event occurs, the browser tracking the event can be triggered to listen for the event and do something. The action taken after the event is triggered is called an event listener.` }
+
 4. Why would we convert a NodeList into an Array?
+   { `We would convert a NodeList into an Array beacause it is easier to loop over it using .forEach.` }
+
 5. What is a component?
+   { `A component is a section of reusable code that we create to keep our code DRY and makes development faster.` }
