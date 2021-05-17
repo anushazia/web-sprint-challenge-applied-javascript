@@ -1,4 +1,25 @@
+/* eslint-disable no-unused-vars */
 const Header = (title, date, temp) => {
+  const header = document.createElement('div')
+  const dateSpan = document.createElement('span')
+  const titleH1 = document.createElement('h1')
+  const tempSpan = document.createElement('span')
+//adding classes
+  header.classList.add('header')
+  dateSpan.classList.add('date')
+  tempSpan.classList.add('temp')
+//adding textContent
+  dateSpan.textContent = date
+  titleH1.textContent = title
+  tempSpan.textContent = temp
+//adding hierarchy
+  header.appendChild(dateSpan)
+  header.appendChild(titleH1)
+  header.appendChild(tempSpan)
+ 
+  return header
+
+
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -14,6 +35,12 @@ const Header = (title, date, temp) => {
 }
 
 const headerAppender = (selector) => {
+  const newSelector = document.querySelector(selector)
+  const newHeader = Header('Lambda Times', 'May 16, 2021', '75°')
+
+  newSelector.appendChild(newHeader)
+
+
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
